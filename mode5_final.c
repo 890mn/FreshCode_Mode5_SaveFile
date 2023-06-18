@@ -79,33 +79,33 @@ int Append_Data_Doc(){
         printf("       Tips: Please enter the Patient Data with the format while input 0 for no:\n");
     
         // Read patient name using fgets
-        printf("       ĞÕÃûName: \n\t");
+        printf("       å§“åName: \n\t");
         fgets(Patient_list[place].Name, sizeof(Patient_list[place].Name), stdin);
         Patient_list[place].Name[strcspn(Patient_list[place].Name, "\n")] = '\0'; // Remove trailing newline
         
         // Read other patient data
-        printf("       Éí·İÖ¤ºÅID_Card: \n\t");
+        printf("       èº«ä»½è¯å·ID_Card: \n\t");
         fgets(Patient_list[place].ID_Card, sizeof(Patient_list[place].ID_Card), stdin);
         Patient_list[place].ID_Card[strcspn(Patient_list[place].ID_Card, "\n")] = '\0'; // Remove trailing newline
         
-        printf("       ÊÇ·ñÑô¿µIs_COVID_Recover: \n\t");
+        printf("       æ˜¯å¦é˜³åº·Is_COVID_Recover: \n\t");
         scanf("%d", &Patient_list[place].Is_COVID_Recover);
         scanf("%*c"); // Consume the newline character left in the buffer
         
         // Read remaining patient data
-        printf("       ÊÇ·ñ¶şÑôIs_Double_Positive: \n\t");
+        printf("       æ˜¯å¦äºŒé˜³Is_Double_Positive: \n\t");
         scanf("%d", &Patient_list[place].Is_Double_Positive);
         scanf("%*c"); // Consume the newline character left in the buffer
         
-        printf("       µÚÒ»´ÎÀ´·ÃÊ±¼äVisit_time(e.g. 2023-06-15): \n\t");
+        printf("       ç¬¬ä¸€æ¬¡æ¥è®¿æ—¶é—´Visit_time(e.g. 2023-06-15): \n\t");
         fgets(Patient_list[place].Visit_time, sizeof(Patient_list[place].Visit_time), stdin);
         Patient_list[place].Visit_time[strcspn(Patient_list[place].Visit_time, "\n")] = '\0'; // Remove trailing newline
         
-        printf("       µÚÒ»´ÎÑô¿µÊ±¼äRecover_time(e.g. 2023-06-16): \n\t");
+        printf("       ç¬¬ä¸€æ¬¡é˜³åº·æ—¶é—´Recover_time(e.g. 2023-06-16): \n\t");
         fgets(Patient_list[place].Recover_time, sizeof(Patient_list[place].Recover_time), stdin);
         Patient_list[place].Recover_time[strcspn(Patient_list[place].Recover_time, "\n")] = '\0'; // Remove trailing newline
 
-        printf("       ¶şÑôÀ´·ÃÊ±¼äDouble_Visit_time(e.g. 2023-06-16): \n\t");
+        printf("       äºŒé˜³æ¥è®¿æ—¶é—´Double_Visit_time(e.g. 2023-06-16): \n\t");
         fgets(Patient_list[place].Double_Visit_time, sizeof(Patient_list[place].Double_Visit_time), stdin);
         Patient_list[place].Double_Visit_time[strcspn(Patient_list[place].Double_Visit_time, "\n")] = '\0'; // Remove trailing newline
 
@@ -141,7 +141,7 @@ void List_Info(){
             printf("%-10s    %-10s      %-10s\n", Patient_list[i].Visit_time, Patient_list[i].Recover_time, Patient_list[i].Double_Visit_time);
         }
     }
-    if(flag) printf("\n       Tips: Êı¾İ¿âÎª¿Õ! None people here.\n");
+    if(flag) printf("\n       Tips: æ•°æ®åº“ä¸ºç©º! None people here.\n");
 }
 
 //      3 Delete petient data
@@ -180,33 +180,33 @@ int Revise_Data_Doc(){
                     printf("       Input: Please enter the Patient Data with the format:\n");
                 
                     // Read patient name using fgets
-                    printf("       ĞÕÃûName: \n\t");
+                    printf("       å§“åName: \n\t");
                     fgets(Patient_list[place].Name, sizeof(Patient_list[place].Name), stdin);
                     Patient_list[place].Name[strcspn(Patient_list[place].Name, "\n")] = '\0'; // Remove trailing newline
                     
                     // Read other patient data
-                    printf("       Éí·İÖ¤ºÅID_Card: \n\t");
+                    printf("       èº«ä»½è¯å·ID_Card: \n\t");
                     fgets(Patient_list[place].ID_Card, sizeof(Patient_list[place].ID_Card), stdin);
                     Patient_list[place].ID_Card[strcspn(Patient_list[place].ID_Card, "\n")] = '\0'; // Remove trailing newline
                     
-                    printf("       ÊÇ·ñÑô¿µIs_COVID_Recover: \n\t");
+                    printf("       æ˜¯å¦é˜³åº·Is_COVID_Recover: \n\t");
                     scanf("%d", &Patient_list[place].Is_COVID_Recover);
                     scanf("%*c"); // Consume the newline character left in the buffer
                     
                     // Read remaining patient data
-                    printf("       ÊÇ·ñ¶şÑôIs_Double_Positive: \n\t");
+                    printf("       æ˜¯å¦äºŒé˜³Is_Double_Positive: \n\t");
                     scanf("%d", &Patient_list[place].Is_Double_Positive);
                     scanf("%*c"); // Consume the newline character left in the buffer
                     
-                    printf("       µÚÒ»´ÎÀ´·ÃÊ±¼äVisit_time: \n\t");
+                    printf("       ç¬¬ä¸€æ¬¡æ¥è®¿æ—¶é—´Visit_time: \n\t");
                     fgets(Patient_list[place].Visit_time, sizeof(Patient_list[place].Visit_time), stdin);
                     Patient_list[place].Visit_time[strcspn(Patient_list[place].Visit_time, "\n")] = '\0'; // Remove trailing newline
                     
-                    printf("       µÚÒ»´ÎÑô¿µÊ±¼äRecover_time: \n\t");
+                    printf("       ç¬¬ä¸€æ¬¡é˜³åº·æ—¶é—´Recover_time: \n\t");
                     fgets(Patient_list[place].Recover_time, sizeof(Patient_list[place].Recover_time), stdin);
                     Patient_list[place].Recover_time[strcspn(Patient_list[place].Recover_time, "\n")] = '\0'; // Remove trailing newline
 
-                    printf("       ¶şÑôÀ´·ÃÊ±¼äDouble_Visit_time(e.g. 2023-06-16): \n\t");
+                    printf("       äºŒé˜³æ¥è®¿æ—¶é—´Double_Visit_time(e.g. 2023-06-16): \n\t");
                     fgets(Patient_list[place].Double_Visit_time, sizeof(Patient_list[place].Double_Visit_time), stdin);
                     Patient_list[place].Double_Visit_time[strcspn(Patient_list[place].Double_Visit_time, "\n")] = '\0'; // Remove trailing newline
 
@@ -456,32 +456,32 @@ void File_Read(){
 void Doc_Info(int id){
     getchar();
     printf("\n\n\nSet initialization...\n");
-    printf("       Tips: »¶Ó­Öµ°àÒ½Éú%sµÇÂ¼\n",accounts[id].username);
+    printf("       Tips: æ¬¢è¿å€¼ç­åŒ»ç”Ÿ%sç™»å½•\n",accounts[id].username);
     char Doc_Info_choice;
-    printf("\n             »¼ Õß ĞÅ Ï¢ ¹Ü Àí    \n");
+    printf("\n             æ‚£ è€… ä¿¡ æ¯ ç®¡ ç†    \n");
 	printf("       ============================= \n");
-	printf("\n         Ò»¡¢¼ÇÂ¼"); 
-    printf("\n       (1) ×·¼Ó¼ÇÂ¼ "); 
-    printf("\n       (2) ÁĞ±í¼ÇÂ¼ ");
-    printf("\n       (3) É¾³ı¼ÇÂ¼ ");
-    printf("\n       (4) ĞŞ¸Ä¼ÇÂ¼ ");
-    printf("\n       (5) ËÑË÷¼ÇÂ¼ \n");
-    printf("\n         ¶ş¡¢ÅÅĞò"); 
-    printf("\n       (6) °´¾ÍÕïÊ±¼ä½µĞòÅÅĞò ");
-    printf("\n       (7) °´¾ÍÕïÊ±¼äÉıĞòÅÅĞò ");
-    printf("\n       (8) °´»¼²¡Ê±³¤½µĞòÅÅĞò ");
-    printf("\n       (9) °´»¼²¡Ê±³¤ÉıĞòÅÅĞò ");
-    printf("\n       (A) °´¶ş´Î»¼²¡Ê±³¤½µĞòÅÅĞò ");
-    printf("\n       (B) °´¶ş´Î»¼²¡Ê±³¤ÉıĞòÅÅĞò \n");
-    printf("\n         Èı¡¢¹«¸æ"); 
-    printf("\n       (C) ²é¿´¡¶·ÀÒßĞ¡ÌùÊ¿¡·¹«¸æ ");
-    printf("\n       (D) ĞŞ¸Ä¡¶·ÀÒßĞ¡ÌùÊ¿¡·ÄÚÈİ ");
-    printf("\n       (E) ²é¿´¡¶²¦´ò120ÕıÈ·»°Êõ¡·¹«¸æ ");
-    printf("\n       (F) ĞŞ¸Ä¡¶²¦´ò120ÕıÈ·»°Êõ¡·ÄÚÈİ \n");
- 	printf("\n       (W) Ğ´ÈëÎÄ¼ş ");
-    printf("\n       (R) ´ÓÎÄ¼şÖØ¶ÁÈ¡ ");
-    printf("\n       (0) ÍË³ö ");
-    printf("\n\n       Input: ÇëÊäÈëÄãµÄÑ¡Ôñ:");
+	printf("\n         ä¸€ã€è®°å½•"); 
+    printf("\n       (1) è¿½åŠ è®°å½• "); 
+    printf("\n       (2) åˆ—è¡¨è®°å½• ");
+    printf("\n       (3) åˆ é™¤è®°å½• ");
+    printf("\n       (4) ä¿®æ”¹è®°å½• ");
+    printf("\n       (5) æœç´¢è®°å½• \n");
+    printf("\n         äºŒã€æ’åº"); 
+    printf("\n       (6) æŒ‰å°±è¯Šæ—¶é—´é™åºæ’åº ");
+    printf("\n       (7) æŒ‰å°±è¯Šæ—¶é—´å‡åºæ’åº ");
+    printf("\n       (8) æŒ‰æ‚£ç—…æ—¶é•¿é™åºæ’åº ");
+    printf("\n       (9) æŒ‰æ‚£ç—…æ—¶é•¿å‡åºæ’åº ");
+    printf("\n       (A) æŒ‰äºŒæ¬¡æ‚£ç—…æ—¶é•¿é™åºæ’åº ");
+    printf("\n       (B) æŒ‰äºŒæ¬¡æ‚£ç—…æ—¶é•¿å‡åºæ’åº \n");
+    printf("\n         ä¸‰ã€å…¬å‘Š"); 
+    printf("\n       (C) æŸ¥çœ‹ã€Šé˜²ç–«å°è´´å£«ã€‹å…¬å‘Š ");
+    printf("\n       (D) ä¿®æ”¹ã€Šé˜²ç–«å°è´´å£«ã€‹å†…å®¹ ");
+    printf("\n       (E) æŸ¥çœ‹ã€Šæ‹¨æ‰“120æ­£ç¡®è¯æœ¯ã€‹å…¬å‘Š ");
+    printf("\n       (F) ä¿®æ”¹ã€Šæ‹¨æ‰“120æ­£ç¡®è¯æœ¯ã€‹å†…å®¹ \n");
+ 	printf("\n       (W) å†™å…¥æ–‡ä»¶ ");
+    printf("\n       (R) ä»æ–‡ä»¶é‡è¯»å– ");
+    printf("\n       (0) é€€å‡º ");
+    printf("\n\n       Input: è¯·è¾“å…¥ä½ çš„é€‰æ‹©:");
     scanf("%c",&Doc_Info_choice);
     while(Doc_Info_choice != '0'){
         switch(Doc_Info_choice){
@@ -588,30 +588,30 @@ void Doc_Info(int id){
                 system("cls");
                 break;
         }
-        printf("\n             »¼ Õß ĞÅ Ï¢ ¹Ü Àí    \n");
+        printf("\n             æ‚£ è€… ä¿¡ æ¯ ç®¡ ç†    \n");
         printf("       =============================   \n");
-        printf("\n         Ò»¡¢¼ÇÂ¼"); 
-        printf("\n       (1) ×·¼Ó¼ÇÂ¼ "); 
-        printf("\n       (2) ÁĞ±í¼ÇÂ¼ ");
-        printf("\n       (3) É¾³ı¼ÇÂ¼ ");
-        printf("\n       (4) ĞŞ¸Ä¼ÇÂ¼ ");
-        printf("\n       (5) ËÑË÷¼ÇÂ¼ \n");
-        printf("\n         ¶ş¡¢ÅÅĞò"); 
-        printf("\n       (6) °´¾ÍÕïÊ±¼ä½µĞòÅÅĞò ");
-        printf("\n       (7) °´¾ÍÕïÊ±¼äÉıĞòÅÅĞò ");
-        printf("\n       (8) °´»¼²¡Ê±³¤½µĞòÅÅĞò ");
-        printf("\n       (9) °´»¼²¡Ê±³¤ÉıĞòÅÅĞò ");
-        printf("\n       (A) °´¶ş´Î»¼²¡Ê±³¤½µĞòÅÅĞò ");
-        printf("\n       (B) °´¶ş´Î»¼²¡Ê±³¤ÉıĞòÅÅĞò \n");
-        printf("\n         Èı¡¢¹«¸æ"); 
-        printf("\n       (C) ²é¿´¡¶·ÀÒßĞ¡ÌùÊ¿¡·¹«¸æ ");
-        printf("\n       (D) ĞŞ¸Ä¡¶·ÀÒßĞ¡ÌùÊ¿¡·ÄÚÈİ ");
-        printf("\n       (E) ²é¿´¡¶²¦´ò120ÕıÈ·»°Êõ¡·¹«¸æ ");
-        printf("\n       (F) ĞŞ¸Ä¡¶²¦´ò120ÕıÈ·»°Êõ¡·ÄÚÈİ \n");
-        printf("\n       (W) Ğ´ÈëÎÄ¼ş ");
-        printf("\n       (R) ´ÓÎÄ¼şÖØ¶ÁÈ¡ ");
-        printf("\n       (0) ÍË³ö ");
-        printf("\n\n       Input: ÇëÊäÈëÄãµÄÑ¡Ôñ:");
+        printf("\n         ä¸€ã€è®°å½•"); 
+        printf("\n       (1) è¿½åŠ è®°å½• "); 
+        printf("\n       (2) åˆ—è¡¨è®°å½• ");
+        printf("\n       (3) åˆ é™¤è®°å½• ");
+        printf("\n       (4) ä¿®æ”¹è®°å½• ");
+        printf("\n       (5) æœç´¢è®°å½• \n");
+        printf("\n         äºŒã€æ’åº"); 
+        printf("\n       (6) æŒ‰å°±è¯Šæ—¶é—´é™åºæ’åº ");
+        printf("\n       (7) æŒ‰å°±è¯Šæ—¶é—´å‡åºæ’åº ");
+        printf("\n       (8) æŒ‰æ‚£ç—…æ—¶é•¿é™åºæ’åº ");
+        printf("\n       (9) æŒ‰æ‚£ç—…æ—¶é•¿å‡åºæ’åº ");
+        printf("\n       (A) æŒ‰äºŒæ¬¡æ‚£ç—…æ—¶é•¿é™åºæ’åº ");
+        printf("\n       (B) æŒ‰äºŒæ¬¡æ‚£ç—…æ—¶é•¿å‡åºæ’åº \n");
+        printf("\n         ä¸‰ã€å…¬å‘Š"); 
+        printf("\n       (C) æŸ¥çœ‹ã€Šé˜²ç–«å°è´´å£«ã€‹å…¬å‘Š ");
+        printf("\n       (D) ä¿®æ”¹ã€Šé˜²ç–«å°è´´å£«ã€‹å†…å®¹ ");
+        printf("\n       (E) æŸ¥çœ‹ã€Šæ‹¨æ‰“120æ­£ç¡®è¯æœ¯ã€‹å…¬å‘Š ");
+        printf("\n       (F) ä¿®æ”¹ã€Šæ‹¨æ‰“120æ­£ç¡®è¯æœ¯ã€‹å†…å®¹ \n");
+        printf("\n       (W) å†™å…¥æ–‡ä»¶ ");
+        printf("\n       (R) ä»æ–‡ä»¶é‡è¯»å– ");
+        printf("\n       (0) é€€å‡º ");
+        printf("\n\n       Input: è¯·è¾“å…¥ä½ çš„é€‰æ‹©:");
         if(Doc_Info_choice != 'D' && Doc_Info_choice != 'F') getchar();
         scanf("%c",&Doc_Info_choice);
     }
@@ -624,33 +624,33 @@ int Revise_Data_Pat(int place){
     while (1) {
         printf("       Input: Please enter the Data with the format:\n");
         // Read patient name using fgets
-        printf("       ĞÕÃûName: \n\t");
+        printf("       å§“åName: \n\t");
         fgets(Patient_list[place].Name, sizeof(Patient_list[place].Name), stdin);
         Patient_list[place].Name[strcspn(Patient_list[place].Name, "\n")] = '\0'; // Remove trailing newline
                     
         // Read other patient data
-        printf("       Éí·İÖ¤ºÅID_Card: \n\t");
+        printf("       èº«ä»½è¯å·ID_Card: \n\t");
         fgets(Patient_list[place].ID_Card, sizeof(Patient_list[place].ID_Card), stdin);
         Patient_list[place].ID_Card[strcspn(Patient_list[place].ID_Card, "\n")] = '\0'; // Remove trailing newline
                     
-        printf("       ÊÇ·ñÑô¿µIs_COVID_Recover: \n\t");
+        printf("       æ˜¯å¦é˜³åº·Is_COVID_Recover: \n\t");
         scanf("%d", &Patient_list[place].Is_COVID_Recover);
         scanf("%*c"); // Consume the newline character left in the buffer
                     
         // Read remaining patient data
-        printf("       ÊÇ·ñ¶şÑôIs_Double_Positive: \n\t");
+        printf("       æ˜¯å¦äºŒé˜³Is_Double_Positive: \n\t");
         scanf("%d", &Patient_list[place].Is_Double_Positive);
         scanf("%*c"); // Consume the newline character left in the buffer
                     
-        printf("       µÚÒ»´ÎÀ´·ÃÊ±¼äVisit_time(e.g. 2023-06-16): \n\t");
+        printf("       ç¬¬ä¸€æ¬¡æ¥è®¿æ—¶é—´Visit_time(e.g. 2023-06-16): \n\t");
         fgets(Patient_list[place].Visit_time, sizeof(Patient_list[place].Visit_time), stdin);
         Patient_list[place].Visit_time[strcspn(Patient_list[place].Visit_time, "\n")] = '\0'; // Remove trailing newline
                     
-        printf("       µÚÒ»´ÎÑô¿µÊ±¼äRecover_time(e.g. 2023-06-16): \n\t");
+        printf("       ç¬¬ä¸€æ¬¡é˜³åº·æ—¶é—´Recover_time(e.g. 2023-06-16): \n\t");
         fgets(Patient_list[place].Recover_time, sizeof(Patient_list[place].Recover_time), stdin);
         Patient_list[place].Recover_time[strcspn(Patient_list[place].Recover_time, "\n")] = '\0'; // Remove trailing newline
 
-        printf("       ¶şÑôÀ´·ÃÊ±¼äDouble_Visit_time(e.g. 2023-06-16): \n\t");
+        printf("       äºŒé˜³æ¥è®¿æ—¶é—´Double_Visit_time(e.g. 2023-06-16): \n\t");
         fgets(Patient_list[place].Double_Visit_time, sizeof(Patient_list[place].Double_Visit_time), stdin);
         Patient_list[place].Double_Visit_time[strcspn(Patient_list[place].Double_Visit_time, "\n")] = '\0'; // Remove trailing newline
 
@@ -691,39 +691,39 @@ void Pat_Info(){
     getchar();
     do{
         if(Pat_Info_Choice == '0'){
-            //Èô²»ÄÜÔÚ¼ÇÂ¼ÖĞËÑË÷µ½ĞÅÏ¢£¬ÔòÌø×ª£¬ÏÔÊ¾ÈçÏÂ½çÃæ£º
-            printf("\n       Input: ÇëÊäÈëÄúµÄÉí·İÖ¤ºÅÂëID_Card:\n       ");
+            //è‹¥ä¸èƒ½åœ¨è®°å½•ä¸­æœç´¢åˆ°ä¿¡æ¯ï¼Œåˆ™è·³è½¬ï¼Œæ˜¾ç¤ºå¦‚ä¸‹ç•Œé¢ï¼š
+            printf("\n       Input: è¯·è¾“å…¥æ‚¨çš„èº«ä»½è¯å·ç ID_Card:\n       ");
             place = Empty_Search();
             fgets(Patient_list[place].ID_Card, sizeof(Patient_list[place].ID_Card), stdin);
             Patient_list[place].ID_Card[strcspn(Patient_list[place].ID_Card, "\n")] = '\0'; // Remove trailing newline
 
-            printf("\n       Tips: Éí·İÖ¤ºÅÂëÎª %s µÄÓÃ»§Çë×¢²á:\n\n ",Patient_list[place].ID_Card); 
+            printf("\n       Tips: èº«ä»½è¯å·ç ä¸º %s çš„ç”¨æˆ·è¯·æ³¨å†Œ:\n\n ",Patient_list[place].ID_Card); 
 
             // Read patient name using fgets
-            printf("       ĞÕÃûName: \n\t");
+            printf("       å§“åName: \n\t");
             fgets(Patient_list[place].Name, sizeof(Patient_list[place].Name), stdin);
             Patient_list[place].Name[strcspn(Patient_list[place].Name, "\n")] = '\0'; // Remove trailing newline
             
-            printf("       ÊÇ·ñÑô¿µIs_COVID_Recover: \n\t");
+            printf("       æ˜¯å¦é˜³åº·Is_COVID_Recover: \n\t");
             scanf("%d", &Patient_list[place].Is_COVID_Recover);
             scanf("%*c"); // Consume the newline character left in the buffer
             
             // Read remaining patient data
-            printf("       ÊÇ·ñ¶şÑôIs_Double_Positive: \n\t");
+            printf("       æ˜¯å¦äºŒé˜³Is_Double_Positive: \n\t");
             scanf("%d", &Patient_list[place].Is_Double_Positive);
             scanf("%*c"); // Consume the newline character left in the buffer
 
-            printf("       µÚÒ»´ÎÀ´·ÃÊ±¼äVisit_time(e.g. 2023-06-15): \n\t");
+            printf("       ç¬¬ä¸€æ¬¡æ¥è®¿æ—¶é—´Visit_time(e.g. 2023-06-15): \n\t");
             scanf("%*c"); // Consume the newline character left in the buffer
             fgets(Patient_list[place].Visit_time, sizeof(Patient_list[place].Visit_time), stdin);
             Patient_list[place].Visit_time[strcspn(Patient_list[place].Visit_time, "\n")] = '\0'; // Remove trailing newline
 
-            printf("       µÚÒ»´ÎÑô¿µÊ±¼äRecover_time(e.g. 2023-06-16): \n\t");
+            printf("       ç¬¬ä¸€æ¬¡é˜³åº·æ—¶é—´Recover_time(e.g. 2023-06-16): \n\t");
             scanf("%*c"); // Consume the newline character left in the buffer
             fgets(Patient_list[place].Recover_time, sizeof(Patient_list[place].Recover_time), stdin);
             Patient_list[place].Recover_time[strcspn(Patient_list[place].Recover_time, "\n")] = '\0'; // Remove trailing newline
 
-            printf("       ¶şÑôÀ´·ÃÊ±¼äDouble_Visit_time(e.g. 2023-06-16): \n\t");
+            printf("       äºŒé˜³æ¥è®¿æ—¶é—´Double_Visit_time(e.g. 2023-06-16): \n\t");
             scanf("%*c"); // Consume the newline character left in the buffer
             fgets(Patient_list[place].Double_Visit_time, sizeof(Patient_list[place].Double_Visit_time), stdin);
             Patient_list[place].Double_Visit_time[strcspn(Patient_list[place].Double_Visit_time, "\n")] = '\0'; // Remove trailing newline
@@ -733,23 +733,23 @@ void Pat_Info(){
             Pat_Info_Choice = '1';
         }
         else if(Pat_Info_Choice == '1'){
-            //ÈôÄÜÔÚ¼ÇÂ¼ÖĞËÑË÷µ½ĞÅÏ¢£¬ÔòÌø×ª¶ÔÓ¦»¼ÕßµÄ¼ÇÂ¼ĞÅÏ¢£¬ÏÔÊ¾ÈçÏÂ½çÃæ£º
+            //è‹¥èƒ½åœ¨è®°å½•ä¸­æœç´¢åˆ°ä¿¡æ¯ï¼Œåˆ™è·³è½¬å¯¹åº”æ‚£è€…çš„è®°å½•ä¿¡æ¯ï¼Œæ˜¾ç¤ºå¦‚ä¸‹ç•Œé¢ï¼š
             printf("\n ");
-            printf("\n       %s»¼ÕßÄúºÃ! ÒÔÏÂÎªÄúÔÚ±¾ÔºµÇ¼ÇµÄ¸öÈËĞÅÏ¢£º\n",Patient_list[place].Name);
-            printf("\n       (1)Éí·İÖ¤ºÅ             (2)¾ÍÕïÊ±¼ä \n");
+            printf("\n       %sæ‚£è€…æ‚¨å¥½! ä»¥ä¸‹ä¸ºæ‚¨åœ¨æœ¬é™¢ç™»è®°çš„ä¸ªäººä¿¡æ¯ï¼š\n",Patient_list[place].Name);
+            printf("\n       (1)èº«ä»½è¯å·             (2)å°±è¯Šæ—¶é—´ \n");
             printf("          %-18s      %s\n", Patient_list[place].ID_Card, Patient_list[place].Visit_time);
-            printf("       (3)ÊÇ·ñÎª¶şÑô           (4)ÏÖÊÇ·ñÑô¿µ    \n");
-            printf("          %-18s      %s\n", TOF(Patient_list[place].Is_COVID_Recover), TOF(Patient_list[place].Is_Double_Positive));
-            printf("       (5)Ñô¿µÊ±¼ä             (6)¶şÑô¾ÍÕïÊ±¼ä  \n");
+            printf("       (3)æ˜¯å¦ä¸ºäºŒé˜³           (4)ç°æ˜¯å¦é˜³åº·    \n");
+            printf("          %-18s      %s\n", TOF(Patient_list[place].Is_Double_Positive), TOF(Patient_list[place].Is_COVID_Recover));
+            printf("       (5)é˜³åº·æ—¶é—´             (6)äºŒé˜³å°±è¯Šæ—¶é—´  \n");
             printf("          %-18s      %s\n", Patient_list[place].Recover_time, Patient_list[place].Double_Visit_time);
                 
             printf("\n");
             printf("\n       =================================   \n");
-            printf("\n       (1) ĞŞ¸Ä¼ÇÂ¼                          "); 
-            printf("\n       (2) ²é¿´¡¶·ÀÒßĞ¡ÌùÊ¿¡·¹«¸æ             ");
-            printf("\n       (3) ²é¿´¡¶²¦´ò120ÕıÈ·»°Êõ¡·¹«¸æ        ");
+            printf("\n       (1) ä¿®æ”¹è®°å½•                          "); 
+            printf("\n       (2) æŸ¥çœ‹ã€Šé˜²ç–«å°è´´å£«ã€‹å…¬å‘Š             ");
+            printf("\n       (3) æŸ¥çœ‹ã€Šæ‹¨æ‰“120æ­£ç¡®è¯æœ¯ã€‹å…¬å‘Š        ");
             printf("\n");
-            printf("\n       Input: ÇëÊäÈëÑ¡Ïî Enter choice:");
+            printf("\n       Input: è¯·è¾“å…¥é€‰é¡¹ Enter choice:");
             scanf("%c",&Pat_Info_Choice);
             getchar();
             while(Pat_Info_Choice != '0'){
@@ -775,21 +775,21 @@ void Pat_Info(){
                         break;
                 }
                 printf("\n ");
-                printf("\n       %s»¼ÕßÄúºÃ! ÒÔÏÂÎªÄúÔÚ±¾ÔºµÇ¼ÇµÄ¸öÈËĞÅÏ¢£º\n",Patient_list[place].Name);
-                printf("\n       (1)Éí·İÖ¤ºÅ             (2)¾ÍÕïÊ±¼ä \n");
+                printf("\n       %sæ‚£è€…æ‚¨å¥½! ä»¥ä¸‹ä¸ºæ‚¨åœ¨æœ¬é™¢ç™»è®°çš„ä¸ªäººä¿¡æ¯ï¼š\n",Patient_list[place].Name);
+                printf("\n       (1)èº«ä»½è¯å·             (2)å°±è¯Šæ—¶é—´ \n");
                 printf("          %-18s      %s\n", Patient_list[place].ID_Card, Patient_list[place].Visit_time);
-                printf("       (3)ÊÇ·ñÎª¶şÑô           (4)ÏÖÊÇ·ñÑô¿µ    \n");
-                printf("          %-18s      %s\n", TOF(Patient_list[place].Is_COVID_Recover), TOF(Patient_list[place].Is_Double_Positive));
-                printf("       (5)Ñô¿µÊ±¼ä             (6)¶şÑô¾ÍÕïÊ±¼ä  \n");
+                printf("       (3)æ˜¯å¦ä¸ºäºŒé˜³           (4)ç°æ˜¯å¦é˜³åº·    \n");
+                printf("          %-18s      %s\n", TOF(Patient_list[place].Is_Double_Positive), TOF(Patient_list[place].Is_COVID_Recover));
+                printf("       (5)é˜³åº·æ—¶é—´             (6)äºŒé˜³å°±è¯Šæ—¶é—´  \n");
                 printf("          %-18s      %s\n", Patient_list[place].Recover_time, Patient_list[place].Double_Visit_time);
                     
                 printf("\n");
                 printf("\n       =================================   \n");
-                printf("\n       (1) ĞŞ¸Ä¼ÇÂ¼                          "); 
-                printf("\n       (2) ²é¿´¡¶·ÀÒßĞ¡ÌùÊ¿¡·¹«¸æ             ");
-                printf("\n       (3) ²é¿´¡¶²¦´ò120ÕıÈ·»°Êõ¡·¹«¸æ        ");
+                printf("\n       (1) ä¿®æ”¹è®°å½•                          "); 
+                printf("\n       (2) æŸ¥çœ‹ã€Šé˜²ç–«å°è´´å£«ã€‹å…¬å‘Š             ");
+                printf("\n       (3) æŸ¥çœ‹ã€Šæ‹¨æ‰“120æ­£ç¡®è¯æœ¯ã€‹å…¬å‘Š        ");
                 printf("\n");
-                printf("\n       Input: ÇëÊäÈëÑ¡Ïî Enter choice:");
+                printf("\n       Input: è¯·è¾“å…¥é€‰é¡¹ Enter choice:");
                 scanf("%c",&Pat_Info_Choice);
                 getchar();
             }
@@ -802,7 +802,7 @@ void Pat_Info(){
 void loadAccountsFromFile(){
     FILE *file = fopen("accounts.dat", "r");
     if(file == NULL){
-        printf("       Tips: ÎŞ·¨´ò¿ªÎÄ¼ş½øĞĞ¶ÁÈ¡ Fail to read.\n");
+        printf("       Tips: Fail to read doctor information.\n");
         return;
     }
     numAccounts = 0;
@@ -811,7 +811,7 @@ void loadAccountsFromFile(){
 
     while(fscanf(file, "%s %s", username, password) == 2){
         if (numAccounts == MAX_ACCOUNTS) {
-            printf("       Tips: ÎÄ¼şÖĞµÄÕËºÅ³¬¹ıÁËÔÊĞíµÄ×î´óÊıÁ¿ Oversize.\n");
+            printf("       Tips: Data Oversize.\n");
             break;
         }
         strcpy(accounts[numAccounts].username, username);
@@ -828,10 +828,10 @@ int login(){
     char username[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
     
-    printf("       Input: ÇëÊäÈëÕËºÅ Account:");
+    printf("       Input: è¯·è¾“å…¥è´¦å· Account:");
     scanf("%s", username);
     
-    printf("       Input: ÇëÊäÈëÃÜÂë Password:");
+    printf("       Input: è¯·è¾“å…¥å¯†ç  Password:");
     scanf("%s", password);
     
     for (i = 0; i < numAccounts; i++) {
@@ -846,19 +846,19 @@ int login(){
 //      1 Doctor Account Create
 void createAccount(){
     if (numAccounts == MAX_ACCOUNTS) {
-        printf("       Tips: ÒÑ´ïµ½ÕËºÅÉÏÏŞ Account full.\n");
+        printf("       Tips: å·²è¾¾åˆ°è´¦å·ä¸Šé™ Account full.\n");
         return;
     }
     struct Account newAccount;
 
-    printf("       Input: ÇëÊäÈëÕËºÅ Account:");
+    printf("       Input: è¯·è¾“å…¥è´¦å· Account:");
     scanf("%s", newAccount.username);
-    printf("       Input: ÇëÊäÈëÃÜÂë Password:");
+    printf("       Input: è¯·è¾“å…¥å¯†ç  Password:");
     scanf("%s", newAccount.password);
 
     accounts[numAccounts] = newAccount;
     numAccounts++;
-    printf("       Tips: ÕËºÅ´´½¨³É¹¦ Account exist.\n");
+    printf("       Tips: è´¦å·åˆ›å»ºæˆåŠŸ Account exist.\n");
 }
 
 //      2 delete account
@@ -866,49 +866,49 @@ void deleteAccountFromFile() {
     char username[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
 
-    printf("       Input: ÇëÊäÈëÒªÉ¾³ıµÄÕËºÅ Delete Account:");
+    printf("       Input: è¯·è¾“å…¥è¦åˆ é™¤çš„è´¦å· Delete Account:");
     scanf("%s", username);
-    printf("       Input: ÇëÊäÈëÒªÉ¾³ıµÄÕËºÅÃÜÂë Delete Password:");
+    printf("       Input: è¯·è¾“å…¥è¦åˆ é™¤çš„è´¦å·å¯†ç  Delete Password:");
     scanf("%s", password);
 
     FILE *file = fopen("accounts.dat", "r");
     if (file == NULL) {
-        printf("       Tips: ÎŞ·¨´ò¿ªÎÄ¼ş½øĞĞ¶ÁÈ¡ Read fail.\n");
+        printf("       Tips: Read fail.\n");
         return;
     }
-    // ´´½¨ÁÙÊ±ÎÄ¼şÓÃÓÚ´æ´¢Î´É¾³ıµÄÕËºÅÃÜÂë
+    // åˆ›å»ºä¸´æ—¶æ–‡ä»¶ç”¨äºå­˜å‚¨æœªåˆ é™¤çš„è´¦å·å¯†ç 
     FILE *tempFile = fopen("temp.txt", "w");
     if (tempFile == NULL) {
-        printf("       Tips: ÎŞ·¨´ò¿ªÁÙÊ±ÎÄ¼ş½øĞĞĞ´Èë Temp fail.\n");
+        printf("       Tips: Temp open fail.\n");
         fclose(file);
         return;
     }
     int found = 0;
     char currUsername[MAX_USERNAME_LENGTH];
     char currPassword[MAX_PASSWORD_LENGTH];
-    // ÖğĞĞ¶ÁÈ¡ÎÄ¼ş£¬½«Î´Æ¥ÅäµÄÕËºÅÃÜÂëĞ´ÈëÁÙÊ±ÎÄ¼ş
+    // é€è¡Œè¯»å–æ–‡ä»¶ï¼Œå°†æœªåŒ¹é…çš„è´¦å·å¯†ç å†™å…¥ä¸´æ—¶æ–‡ä»¶
     while (fscanf(file, "%s %s", currUsername, currPassword) == 2) {
         if (strcmp(currUsername, username) == 0 && strcmp(currPassword, password) == 0) {
-            found = 1;  // ±ê¼ÇÕÒµ½Æ¥ÅäµÄÕËºÅÃÜÂë
+            found = 1;  // æ ‡è®°æ‰¾åˆ°åŒ¹é…çš„è´¦å·å¯†ç 
         } else {
             fprintf(tempFile, "%s %s\n", currUsername, currPassword);
         }
     }
     fclose(file);
     fclose(tempFile);
-    // É¾³ıÔ­ÎÄ¼ş²¢½«ÁÙÊ±ÎÄ¼şÖØÃüÃûÎªÔ­ÎÄ¼şÃû
+    // åˆ é™¤åŸæ–‡ä»¶å¹¶å°†ä¸´æ—¶æ–‡ä»¶é‡å‘½åä¸ºåŸæ–‡ä»¶å
     if (remove("accounts.dat") != 0) {
-        printf("       Tips: ÎŞ·¨É¾³ıÎÄ¼ş Delete error.\n");
+        printf("       Tips: Delete error.\n");
         return;
     }
     if (rename("temp.txt", "accounts.dat") != 0) {
-        printf("       Tips: ÎŞ·¨ÖØÃüÃûÎÄ¼ş Rename error.\n");
+        printf("       Tips: Rename error.\n");
         return;
     }
     if (found) {
-        printf("       Tips: ÕËºÅÃÜÂëÒÑ´ÓÎÄ¼şÖĞÉ¾³ı Remove success.\n");
+        printf("       Tips: Remove success.\n");
     } else {
-        printf("       Tips: Î´ÕÒµ½Æ¥ÅäµÄÕËºÅÃÜÂë No match.\n");
+        printf("       Tips: No match account-password.\n");
     }
 }
 
@@ -916,7 +916,7 @@ void deleteAccountFromFile() {
 void displayAllAccounts() {
     FILE *file = fopen("accounts.dat", "r");
     if (file == NULL) {
-        printf("       Tips: ÎŞ·¨´ò¿ªÎÄ¼ş½øĞĞ¶ÁÈ¡ Read fail.\n");
+        printf("       Tips: Read fail.\n");
         return;
     }
     char username[MAX_USERNAME_LENGTH];
@@ -924,7 +924,7 @@ void displayAllAccounts() {
 
     printf("       Tips: Account & Password\n");
     while (fscanf(file, "%s %s", username, password) == 2) {
-        printf("       ÕËºÅ£º%s  ÃÜÂë£º%s\n", username, password);
+        printf("       è´¦å·ï¼š%s  å¯†ç ï¼š%s\n", username, password);
     }
     fclose(file);
 }
@@ -934,14 +934,14 @@ void saveAccountsToFile() {
 	int i;
     FILE *file = fopen("accounts.dat", "w");
     if (file == NULL) {
-        printf("       Tips: ÎŞ·¨´ò¿ªÎÄ¼ş½øĞĞĞ´Èë Write fail.\n");
+        printf("       Tips: Write fail.\n");
         return;
     }
     for (i = 0; i < numAccounts; i++) {
         fprintf(file, "%s %s\n", accounts[i].username, accounts[i].password);
     }
     fclose(file);
-    printf("       Tips: ÕËºÅÃÜÂëÒÑ±£´æµ½ÎÄ¼şÖĞ Save success.\n");
+    printf("       Tips: Save success.\n");
 }
 
 //      B Administrator continue
@@ -957,12 +957,12 @@ int Continue(){
 void Admin_Mode(){
     int choice;
     while (1){
-        printf("\n       ¹ÜÀíÔ±Ä£Ê½Admin Mode\n");
-        printf("       0. ÍË³öÄ£Ê½ Exit\n");
-        printf("       1. ´´½¨ÕËºÅ Create\n");
-        printf("       2. É¾³ıÕËºÅ Delete\n");
-        printf("       3. ÏÔÊ¾ËùÓĞÕËºÅ ShowInfo\n");
-        printf("       4. Ğ´ÈëÎÄ¼ş Write\n");
+        printf("\n       ç®¡ç†å‘˜æ¨¡å¼Admin Mode\n");
+        printf("       0. é€€å‡ºæ¨¡å¼ Exit\n");
+        printf("       1. åˆ›å»ºè´¦å· Create\n");
+        printf("       2. åˆ é™¤è´¦å· Delete\n");
+        printf("       3. æ˜¾ç¤ºæ‰€æœ‰è´¦å· ShowInfo\n");
+        printf("       4. å†™å…¥æ–‡ä»¶ Write\n");
         printf("       Input: Please enter the choice:");
         scanf("%d", &choice);
         printf("\n\n");
@@ -995,7 +995,7 @@ void Admin_Mode(){
                 system("cls");
                 break;
             default:
-                printf("       Tips: ÎŞĞ§µÄÑ¡Ôñ Choose error.\n");
+                printf("       Tips: Choose error.\n");
         }
     }
 }
@@ -1059,14 +1059,14 @@ int main(){
     list_current = 0;
 	printf("\n");
 	printf("Display Main Info...\n\n");
-	printf("              ³ÌĞòÉè¼ÆÓëÊµ¼ù    ÊµÑé£¨Îå£© ĞÂ¹ÚÒßÇé³£Ì¬»¯·À¿Ø½×¶ÎÒ½ÉúÓë»¼ÕßĞÅÏ¢¹ÜÀíÏµÍ³\n");
+	printf("              ç¨‹åºè®¾è®¡ä¸å®è·µ    å®éªŒï¼ˆäº”ï¼‰ æ–°å† ç–«æƒ…å¸¸æ€åŒ–é˜²æ§é˜¶æ®µåŒ»ç”Ÿä¸æ‚£è€…ä¿¡æ¯ç®¡ç†ç³»ç»Ÿ\n");
 	printf("       Welcome to Doctor/Patient MIS in NPC(Normal prevention and control) stage of COVID-19\n");
     printf("\n");
-	printf("                             22¼Æ¿ÆC1°à ÕÅê¿ÔÃ »Æñ´Ğù   2023.06.19\n\n");
-    printf("                  Æô¶¯ËµÃ÷Begin tip : Continue with identity Doctor(1) or Patient(2)\n");
+	printf("                             22è®¡ç§‘C1ç­ å¼ æ˜•æ‚¦ é»„ç¿Šè½©   2023.06.19\n\n");
+    printf("                  å¯åŠ¨è¯´æ˜Begin tip : Continue with identity Doctor(1) or Patient(2)\n");
 	printf("       ======================================================================================\n");
-    printf("                            (1)Ò½Éú                      (2)»¼Õß\n"); 
-    printf("\n       ÇëÑ¡ÔñÕıÈ·Éí·İµÇÂ¼£º");
+    printf("                            (1)åŒ»ç”Ÿ                      (2)æ‚£è€…\n"); 
+    printf("\n       è¯·é€‰æ‹©æ­£ç¡®èº«ä»½ç™»å½•ï¼š");
     MainInfo();
 	return 0;
 }
